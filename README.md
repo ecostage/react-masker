@@ -1,4 +1,4 @@
-# React-number
+# ReactMasker
 
 A stateless component for masks based on VanillaMasker.
 

@@ -1,10 +1,10 @@
 {
   "name": "react-masker",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "A react component that masks an input for numbers.",
   "repository": {
     "type": "git",
-    "url": "https://github.com/mpivaa/react-number-mask.git"
+    "url": "https://github.com/ecostage/react-masker"
   },
   "author": "Marcelo Piva <m.pivaa@gmail.com>",
   "keywords": [
