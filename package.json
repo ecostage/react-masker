@@ -46,6 +46,8 @@
   },
   "dependencies": {
     "lodash.memoize": "^4.0.3",
+    "lodash.range": "^3.1.4",
+    "lodash.reduce": "^4.3.0",
     "vanilla-masker": "^1.0.9"
   }
 }
