@@ -2,7 +2,7 @@ import { PropTypes } from 'react';
 import memoize from 'lodash.memoize';
 import range from 'lodash.range';
 import reduce from 'lodash.reduce';
-import { toMoney, toPattern, toNumber } from 'vanilla-masker';
+import { toMoney, toPattern, toNumberMasker } from 'vanilla-masker';
 
 const toVendorInteger = (n, props) => {
   if(!n) return 0;
@@ -25,7 +25,7 @@ const numberOfDecimalPlaces = (num) => {
   if (!match) { return 0; }
   return Math.max(
        0,
-       // Number of digits right of decimal point.
+       // NumberMasker of digits right of decimal point.
        (match[1] ? match[1].length : 0)
        // Adjust for scientific notation.
        - (match[2] ? +match[2] : 0));
@@ -53,7 +53,7 @@ const fromMaskedString = (str, props) => {
   }
 }
 
-const Float = (props) => {
+const NumberMasker = (props) => {
   const value = toMoney(toVendorInteger(props.value, props), props);
 
   const handleChange = (e) => {
@@ -72,7 +72,7 @@ const Float = (props) => {
   );
 };
 
-Float.propTypes = {
+NumberMasker.propTypes = {
   precision: PropTypes.number,
   separator: PropTypes.string,
   delimiter: PropTypes.string,
@@ -82,4 +82,4 @@ Float.propTypes = {
   value: PropTypes.number
 }
 
-export { Float, Float as Money };
+export { NumberMasker, NumberMasker as Money };
